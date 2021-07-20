@@ -32,13 +32,17 @@ const Truco = ({ navigation }) => {
                 </View>
             </View>
 
-            <View style={styles.container}>
+            
+                {/*
+                <View style={styles.container}>
                 <Pressable onPress={() => {navigation.navigate("TrucoLastScores")}}>
                     <View style={styles.buttonResults}>
                         <Text style={styles.textoColor}> Resultados anteriores </Text>
                     </View>
                 </Pressable>
-            </View>
+                </View>
+                */}
+            
         </View>
     )
 }
