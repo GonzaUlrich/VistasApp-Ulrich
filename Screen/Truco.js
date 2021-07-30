@@ -1,4 +1,4 @@
-import {Dimensions, Pressable, StyleSheet, Text, View} from 'react-native';
+import {Dimensions, Pressable, StyleSheet, Text, TextInput, View} from 'react-native';
 
 import ConstantColors from '../Constants/ConstantColors';
 import React from 'react';
@@ -9,14 +9,19 @@ const Truco = ({ navigation }) => {
     const sumEquipo1= () => setEquipo1(equipo1+1);
     const [equipo2, setEquipo2] = useState(0);
     const sumEquipo2= () => setEquipo2(equipo2+1);
-
+    const [inputText, setInputText] = useState("");
+    const handleChangeText = (text) => setInputText(text);
     return(
         <View style={styles.screen}>
             <View style={styles.game}>
                 <View style={styles.container}>
                     <Pressable onPress={sumEquipo1}>
                         <View style={styles.buttonGame}>
-                            <Text style={styles.textoColor}> Equipo 1 </Text>
+                            <TextInput
+                                placeholder="Add item"
+                                onChangeText={handleChangeText}
+                                value={inputText}
+                            ></TextInput>
                         </View>
                     </Pressable>
                     <Text>{equipo1}</Text>

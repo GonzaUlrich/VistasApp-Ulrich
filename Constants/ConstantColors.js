@@ -4,4 +4,5 @@ export default{
     beige:'#E0D0C1' ,
     pink: '#A76D60' ,
     red:'#601700',
+    bgTab: '#D7D7D7'
 }
